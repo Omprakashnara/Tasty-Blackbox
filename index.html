@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tasty Restaurant</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f5f5dc;
+		}
+		header {
+			background-color: #8B4513;
+			color: white;
+			padding: 1em;
+			text-align: center;
+		}
+		nav {
+			background-color: #ADD8E6;
+			padding: 1em;
+			text-align: center;
+		}
+		nav a {
+			color: #333;
+			text-decoration: none;
+			margin: 0 1em;
+		}
+		nav a:hover {
+			background-color: #ccc;
+		}
+		main {
+			padding: 2em;
+		}
+		aside {
+			background-color: #8B4513;
+			color: white;
+			padding: 1em;
+			text-align: center;
+			margin-top: 1em;
+		}
+		#map {
+			height: 400px;
+			width: 100%;
+		}
+		@media screen and (max-width: 600px) {
+			nav, aside {
+				display: none;
+			}
+			main {
+				padding: 1em;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Tasty Restaurant</h1>
+	</header>
+	<nav>
+		<a href="#menu">Menu</a>
+		<a href="#about">About the Restaurant</a>
+		<a href="#testimonials">Customer Testimonials</a>
+		<a href="#reservations">Reservations</a>
+	</nav>
+	<main>
+		<h2 id="menu">Menu</h2>
+		<p>
+			<button id="appetizers">Appetizers</button>
+			<button id="entrees">Entrees</button>
+			<button id="desserts">Desserts</button>
+		</p>
+		<div id="menu-items">
+			<!-- Menu items will be inserted here by JavaScript -->
+		</div>
+		<h2 id="about">About the Restaurant</h2>
+		<p>
+			Tasty Restaurant is a rustic, charming eatery that has been serving up delicious food for over 20 years. Our welcoming atmosphere and vibrant color scheme make us the perfect place to enjoy a meal with family and friends.
+		</p>
+		<h2 id="testimonials">Customer Testimonials</h2>
+		<p>
+			"Best food I've ever had!" - John Doe
+		</p>
+		<p>
+			"I love Tasty Restaurant! The staff is always so friendly and the food is amazing." - Jane Doe
+		</p>
+		<h2 id="reservations">Reservations</h2>
+		<p>
+			To make a reservation, please call us at (123) 456-7890.
+		</p>
+	</main>
+	<aside>
+		<div id="map"></div>
+		<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
